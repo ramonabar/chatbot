@@ -1,0 +1,126 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (<ipython-input-5-665a9c5a6d4b>, line 19)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-5-665a9c5a6d4b>\"\u001b[0;36m, line \u001b[0;32m19\u001b[0m\n\u001b[0;31m    neo = input(\"%s, do you want to know about neo-classical?\", %user_name)\u001b[0m\n\u001b[0m                                                                ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "def welcome():\n",
+    "    user_name = input(\"Welcome, what is your name?\")\n",
+    "    print(\"Hello\", user_name)\n",
+    "    ask_topic(user_name)\n",
+    "    \n",
+    "def ask_topic(user_name):\n",
+    "    topic = input(\"%s, would you like to talk about pop, rock, classical or neo-classical?\" %user_name)\n",
+    "    if topic == \"pop\":\n",
+    "        pop(user_name)\n",
+    "    if topic == \"rock\":\n",
+    "        rock(user_name)\n",
+    "    if topic == \"classical\":\n",
+    "        classical(user_name)\n",
+    "    if topic == \"neo-classical\":\n",
+    "        neo_classical(user_name)\n",
+    "        \n",
+    "def pop(user_name):\n",
+    "    print(\"Pop is very popular.\")\n",
+    "    neo = input(\"%s, do you want to know about neo-classical?\", %user_name)\n",
+    "    if neo == \"yes\":\n",
+    "        neo_classical(user_name)\n",
+    "    if neo == \"no\":\n",
+    "        choice = input(\"%s, do you want to change topic or quit?\", %user_name)\n",
+    "        if choice == \"change topic\":\n",
+    "            ask_topic(user_name)\n",
+    "        if choice == \"quit\":\n",
+    "            quit(user_name)\n",
+    "            \n",
+    "def rock(user_name):\n",
+    "    print(\"Rock for ever!\")\n",
+    "    neo = input(\"%s, do you want to know about neo-classical?\", %user_name)\n",
+    "    if neo == \"yes\":\n",
+    "        neo_classical(user_name)\n",
+    "    if neo == \"no\":\n",
+    "        choice = input(\"%s, do you want to change topic or quit?\", %user_name)\n",
+    "        if choice == \"change topic\":\n",
+    "            ask_topic(user_name)\n",
+    "        if choice == \"quit\":\n",
+    "            quit(user_name)          \n",
+    "        \n",
+    "def classical(user_name):\n",
+    "    print(\"Classical is so good that it will always be enjoyed by future generations.\")\n",
+    "    choice = input(\"%s, do you want to change topic or quit?\", %user_name)\n",
+    "    if choice == \"change topic\":\n",
+    "        ask_topic()\n",
+    "    if choice == \"quit\":\n",
+    "        quit()  \n",
+    "            \n",
+    "def neo_classical(user_name):\n",
+    "    print(\"Neo-classical is a return to aestethic percepts as balance, clarity, economy, and emotional restraint.\")\n",
+    "    classic = input(\"%s, Do you want to know about classical music?\", %user_name)\n",
+    "    if classic == \"yes\":\n",
+    "        classical(user_name)\n",
+    "    if classic == \"no\":\n",
+    "        choice = input(\"%s, Do you want to change topic or quit?\", %user_name)\n",
+    "        if choice == \"change topic\":\n",
+    "            ask_topic(user_name)\n",
+    "        if choice == \"quit\":\n",
+    "            quit(user_name)\n",
+    "            \n",
+    "def ask_topic(user_name):\n",
+    "    topic = input(\"%s, do you want to hear pop, rock, classical or neo-classical?\", %user_name)\n",
+    "    if topic == \"pop\":\n",
+    "        pop(user_name)\n",
+    "    if topic == \"rock\":\n",
+    "        rock(user_name)\n",
+    "    if topic == \"classical\":\n",
+    "        classical(user_name)\n",
+    "    if topic == \"neo-classical\":\n",
+    "        neo_classical(user_name)\n",
+    "            \n",
+    "\n",
+    "def quit(user_name):\n",
+    "    print(\"Goodbye, see you soon!\")\n",
+    "    welcome(user_name)\n",
+    "            \n",
+    "welcome()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
